@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Felix | Contact</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="images/faviconf.png">
+<script>
+const isMobile =
+    navigator.userAgentData?.mobile ||
+    /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+    ) ||
+    (
+        navigator.maxTouchPoints > 1 &&
+        /Macintosh/i.test(navigator.userAgent)
+    );
+
+if (!sessionStorage.getItem("allowMobile") && isMobile) {
+    window.location.href = "mobile-warning.html";
+}
+</script>
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<div class="logo">
+Felixpro202110
+</div>
+
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="past-experience.html">Experience</a>
+<a href="my-work.html" class="active">My Work</a>
+<a href="contact.html">Contact</a>
+</div>
+
+</nav>
+
+<div class="experience">
+
+  <h1 class="title">Contact Me</h1>
+
+  <div class="job">
+    <h2>Socials</h2>
+    <p><b>Roblox:</b> Felixpro202110</p>
+    <p><b>Discord:</b>Felixpro#4028 (Felixpro202110)</p>
+  </div>
+
+  <div class="job">
+    <h2>Commissions</h2>
+    <p>Status: <b>Open</b></p>
+    <p>DM me on Discord for inquiries.</p>
+  </div>
+
+  <div class="job">
+    <h2>Response Time</h2>
+    <p>Usually within 24 hours.</p>
+  </div>
+
+</div>
+
+</body>
+</html>

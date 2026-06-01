@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>400 - Warning for Mobile Devices</title>
+<link rel="icon" type="image/png" href="images/faviconf.png">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0a0a0a,#111827);
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    overflow:hidden;
+}
+
+.container{
+    text-align:center;
+    max-width:700px;
+    padding:40px;
+}
+
+.error-code{
+    font-size:140px;
+    font-weight:bold;
+    color:#3b82f6;
+    text-shadow:0 0 30px rgba(59,130,246,0.5);
+}
+
+.title{
+    font-size:35px;
+    margin-top:-15px;
+    margin-bottom:15px;
+}
+
+.description{
+    color:#b0b0b0;
+    font-size:18px;
+    line-height:1.6;
+    margin-bottom:35px;
+}
+
+.dev-text{
+    margin-top:15px;
+    font-size:14px;
+    color:#666;
+}
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    text-decoration:none;
+    padding:14px 28px;
+    border-radius:10px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.primary{
+    background:#3b82f6;
+    color:white;
+}
+
+.primary:hover{
+    background:#2563eb;
+    transform:translateY(-3px);
+}
+
+.secondary{
+    border:1px solid #3b82f6;
+    color:#3b82f6;
+}
+
+.secondary:hover{
+    background:#3b82f6;
+    color:white;
+    transform:translateY(-3px);
+}
+
+.background-glow{
+    position:absolute;
+    width:600px;
+    height:600px;
+    background:#3b82f6;
+    opacity:0.08;
+    filter:blur(120px);
+    border-radius:50%;
+    z-index:-1;
+}
+
+</style>
+</head>
+<body>
+
+<div class="background-glow"></div>
+
+<div class="container">
+
+    <div class="error-code">400</div>
+
+    <h1 class="title">Desktop recommended</h1>
+
+    <p class="description">
+       This Portfolio was primarily designed for desktop devices. You may experience bugs when visiting my portfolio on an mobile device.<br>
+       I am very sorry for the inconvenience caused. These bugs will be fixed in the future.
+    </p>
+    
+    <div class="buttons">
+        <a href="#" class="btn primary" onclick="continueToSite()">Continue Anyway</a>
+    </div>
+
+    <p class="dev-text">
+        Felixpro202110 • Roblox Scripter
+    </p>
+
+<script>
+function continueToSite() {
+    sessionStorage.setItem("allowMobile", "true");
+    window.location.href = "index.html";
+}
+</script>
+</div>
+
+</body>
+</html>

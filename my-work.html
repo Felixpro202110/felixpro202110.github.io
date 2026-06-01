@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Felix | My Work</title>
+<link rel="icon" type="image/png" href="images/faviconf.png">
+<link rel="stylesheet" href="style.css">
+<script>
+const isMobile =
+    navigator.userAgentData?.mobile ||
+    /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+    ) ||
+    (
+        navigator.maxTouchPoints > 1 &&
+        /Macintosh/i.test(navigator.userAgent)
+    );
+
+if (!sessionStorage.getItem("allowMobile") && isMobile) {
+    window.location.href = "mobile-warning.html";
+}
+</script>
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<div class="logo">
+Felixpro202110
+</div>
+
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="past-experience.html">Experience</a>
+<a href="my-work.html" class="active">My Work</a>
+<a href="contact.html">Contact</a>
+</div>
+
+</nav>
+
+
+<section class="hero">
+
+<h1 class="title">My Work</h1>
+
+<p class="subtitle">
+A showcase of scripting projects. All Scripts were created by me or the original script was edited by me.
+</p>
+
+</section>
+
+
+<section class="gallery-container">
+
+<div class="gallery">
+
+<a href="images/image1.png" class="card">
+<img src="images/image1.png" alt="">
+</a>
+
+<a href="images/image2.png" class="card">
+<img src="images/image2.png" alt="">
+</a>
+
+<a href="images/image3.png" class="card">
+<img src="images/image3.png" alt="">
+</a>
+
+<a href="images/image4.png" class="card">
+<img src="images/image4.png" alt="">
+</a>
+
+<a href="images/image5.png" class="card">
+<img src="images/image5.png" alt="">
+</a>
+
+<a href="images/image6.png" class="card">
+<img src="images/image6.png" alt="">
+</a>
+
+<a href="images/image7.png" class="card">
+<img src="images/image7.png" alt="">
+</a>
+
+<a href="images/image8.png" class="card">
+<img src="images/image8.png" alt="">
+</a>
+
+<a href="images/image9.png" class="card">
+<img src="images/image9.png" alt="">
+</a>
+
+<a href="images/image10.png" class="card">
+<img src="images/image10.png" alt="">
+</a>
+
+<a href="images/image11.png" class="card">
+<img src="images/image11.png" alt="">
+</a>
+
+<a href="images/image12.png" class="card">
+<img src="images/image12.png" alt="">
+</a>
+
+<a href="images/image13.png" class="card">
+<img src="images/image13.png" alt="">
+</a>
+
+<a href="images/image14.png" class="card">
+<img src="images/image14.png" alt="">
+</a>
+
+<a href="images/image15.png" class="card">
+<img src="images/image15.png" alt="">
+</a>
+
+<a href="images/image16.png" class="card">
+<img src="images/image16.png" alt="">
+</a>
+
+<a href="images/image17.png" class="card">
+<img src="images/image17.png" alt="">
+</a>
+
+<a href="images/image18.png" class="card">
+<img src="images/image18.png" alt="">
+</a>
+
+<a href="images/image19.png" class="card">
+<img src="images/image19.png" alt="">
+</a>
+
+<a href="images/image20.png" class="card">
+<img src="images/image20.png" alt="">
+</a>
+
+<a href="images/image21.png" class="card">
+<img src="images/image21.png" alt="">
+</a>
+
+<a href="images/image22.png" class="card">
+<img src="images/image22.png" alt="">
+</a>
+
+<a href="images/image23.png" class="card">
+<img src="images/image23.png" alt="">
+</a>
+
+<a href="images/image24.png" class="card">
+<img src="images/image24.png" alt="">
+</a>
+
+<a href="images/image25.png" class="card">
+<img src="images/image25.png" alt="">
+</a>
+
+</div>
+</section>
+
+<div id="lightbox" class="lightbox">
+  <span class="close">&times;</span>
+  <span class="prev">&#10094;</span>
+  <img class="lightbox-img">
+  <span class="next">&#10095;</span>
+</div>
+
+
+<footer>
+© 2026 Felixpro202110 | Roblox Scripter
+</footer>
+
+<script>
+const cards = document.querySelectorAll(".card img");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.querySelector(".lightbox-img");
+
+const closeBtn = document.querySelector(".close");
+const prevBtn = document.querySelector(".prev");
+const nextBtn = document.querySelector(".next");
+
+let currentIndex = 0;
+
+function openLightbox(index) {
+  currentIndex = index;
+  lightboxImg.src = cards[currentIndex].src;
+  lightbox.style.display = "flex";
+}
+
+cards.forEach((img, index) => {
+  img.addEventListener("click", (e) => {
+    e.preventDefault(); // stops link redirect
+    openLightbox(index);
+  });
+});
+
+closeBtn.onclick = () => {
+  lightbox.style.display = "none";
+};
+
+prevBtn.onclick = () => {
+  currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+  lightboxImg.src = cards[currentIndex].src;
+};
+
+nextBtn.onclick = () => {
+  currentIndex = (currentIndex + 1) % cards.length;
+  lightboxImg.src = cards[currentIndex].src;
+};
+
+// click outside image closes
+lightbox.onclick = (e) => {
+  if (e.target === lightbox) {
+    lightbox.style.display = "none";
+  }
+};
+</script>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Case against Dino</title>
+
+  <style>
+    body {
+      background: #111;
+      color: white;
+      font-family: Arial;
+      text-align: center;
+    }
+
+    .gallery img {
+      width: 250px;
+      margin: 10px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+    }
+
+    /* Fullscreen popup */
+    #popup {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.9);
+      justify-content: center;
+      align-items: center;
+    }
+
+    #popup img {
+      max-width: 90%;
+      max-height: 90%;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>"Proof against voidastrodev (1204106021228904448)"</h1>
+
+  <div class="gallery">
+    <img src="image1.png" onclick="openImage(this.src)">
+    <img src="image2.png" onclick="openImage(this.src)">
+    <img src="image3.png" onclick="openImage(this.src)">
+    <img src="image4.png" onclick="openImage(this.src)">
+    <img src="image5.png" onclick="openImage(this.src)">
+    <img src="image6.png" onclick="openImage(this.src)">
+    <img src="image7.png" onclick="openImage(this.src)">
+    <img src="image8.png" onclick="openImage(this.src)">
+  </div>
+
+  <!-- Popup -->
+  <div id="popup" onclick="closeImage()">
+    <img id="popup-img">
+  </div>
+
+  <script>
+    function openImage(src) {
+      document.getElementById("popup").style.display = "flex";
+      document.getElementById("popup-img").src = src;
+    }
+
+    function closeImage() {
+      document.getElementById("popup").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>

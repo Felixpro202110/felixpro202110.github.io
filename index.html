@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Felix | Portfolio</title>
+<link rel="icon" type="image/png" href="images/faviconf.png">
+<script>
+const isMobile =
+    navigator.userAgentData?.mobile ||
+    /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+    ) ||
+    (
+        navigator.maxTouchPoints > 1 &&
+        /Macintosh/i.test(navigator.userAgent)
+    );
+
+if (!sessionStorage.getItem("allowMobile") && isMobile) {
+    window.location.href = "mobile-warning.html";
+}
+</script>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#111,#1d1d1d,#2b2b2b);
+    color:white;
+    min-height:100vh;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+header{
+    padding:30px 0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+}
+
+.logo span{
+    color:#00bfff;
+}
+
+nav button{
+    margin-left:10px;
+}
+
+.hero{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    min-height:75vh;
+}
+
+.hero h1{
+    font-size:60px;
+    margin-bottom:10px;
+}
+
+.hero h2{
+    color:#00bfff;
+    margin-bottom:20px;
+    font-size:28px;
+}
+
+.hero p{
+    max-width:700px;
+    line-height:1.8;
+    color:#d1d1d1;
+    margin-bottom:35px;
+}
+
+.buttons{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    text-decoration:none;
+    padding:14px 28px;
+    border-radius:10px;
+    background:#00bfff;
+    color:white;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+    background:#0095cc;
+}
+
+.info-card{
+    margin-top:40px;
+    background:rgba(255,255,255,0.05);
+    padding:25px;
+    border-radius:15px;
+    backdrop-filter:blur(10px);
+    max-width:700px;
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    color:gray;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+    <div class="logo">
+        Felix<span>.</span>
+    </div>
+</header>
+
+<section class="hero">
+
+<h1>Hi, I'm Felix</h1>
+
+<h2>Roblox Scripter</h2>
+
+<p>
+Welcome to my portfolio website. I create scripts and systems for Roblox
+experiences and work on game functionality, mechanics, and development projects.
+You can explore my previous work and my experience through the sections below.
+</p>
+
+<div class="buttons">
+    <a href="./my-work.html" class="btn">
+        View Past Work
+    </a>
+
+    <a href="./past-experience.html" class="btn">
+        View Experience
+    </a>
+</div>
+
+<div class="info-card">
+
+  <h1 class="title">Skills</h1>
+
+    <p>✓ Roblox Luaua Scripting <br>
+    ✓ UI Development/Design<br>
+    ✓ DataStores & Saving Systems<br>
+    ✓ RemoteEvents & Networking<br>
+    ✓ Optimization & Debugging<br>
+    ✓ Efficient Systems & Working<br>
+    ✓ Professionalism at Work</p>
+</div>
+
+<div class="info-card">
+    <h3>Profile</h3>
+    <br>
+    <p>
+    Name: Felix<br><br>
+    Roblox Username: Felixpro202110<br><br>
+    Discord Username: Felixpro202110<br>(Felixpro#4028)<br>
+    Specialty: Roblox Scripting
+    </p>
+</div>
+
+</section>
+
+</div>
+
+<footer>
+    © 2026 Felix Portfolio
+</footer>
+
+</body>
+</html>
